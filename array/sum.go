@@ -16,6 +16,17 @@ func SumAll(array ...[]int) (sum []int) {
 	return 
 }
 
+func SumAllTails(array ...[]int) (sum []int) {
+	for _, arr := range array {
+		if len(arr) == 0 {
+			sum = append(sum, 0)
+		} else { 
+			sum = append(sum, Sum(arr[1:]))
+		}
+	}
+	return 
+}
+
 func main() {
 
 }
